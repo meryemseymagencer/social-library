@@ -1,0 +1,135 @@
+/* ============================================================
+   📱 iPhone Premium Login / Register Tasarımı
+   Glassmorphism + Soft UI + Animated Elements
+============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* === BACKGROUND (iOS style blurred gradient) === */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(circle at 20% 20%, #1d2631, #0f141a);
+  background-size: 200% 200%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0%   { background-position: 0% 0%;   }
+  50%  { background-position: 80% 80%; }
+  100% { background-position: 0% 0%;   }
+}
+
+/* === BOX (Glass effect) === */
+.auth-box {
+  width: 380px;
+  padding: 40px;
+  border-radius: 22px;
+  
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+  
+  animation: fadeIn 0.8s ease forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 28px;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+
+
+/* === INPUTS (iOS pill style) === */
+.auth-box input {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06);
+
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+
+  transition: all 0.25s ease;
+}
+
+.auth-box input::placeholder {
+  color: #aeb7c2;
+}
+
+.auth-box input:focus {
+  background: rgba(255,255,255,0.12);
+  border-color: #40BCF4;
+  box-shadow: 0 0 0 4px rgba(64,188,244,0.25);
+}
+
+
+/* === BUTTON (iOS premium gradient) === */
+.auth-box button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  margin-top: 10px;
+
+  background: linear-gradient(135deg, #00e09d, #00c0ff);
+  border: none;
+  color: #fff;
+
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+
+  box-shadow: 0 8px 22px rgba(0, 200, 255, 0.25);
+  transition: 0.25s ease;
+}
+
+.auth-box button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 200, 255, 0.35);
+}
+
+.auth-box button:active {
+  transform: scale(0.98);
+}
+
+/* === SMALL LINK === */
+.auth-link {
+  margin-top: 16px;
+  color: #d0d0d0;
+  text-align: center;
+}
+
+.auth-link a {
+  color: #40BCF4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}

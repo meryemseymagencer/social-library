@@ -1,0 +1,640 @@
+.item-detail-container {
+    background: linear-gradient(180deg, #0a0e17 0%, #111827 100%);
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.item-page {
+    padding: 48px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    color: #f8fafc;
+}
+
+/* HEADER AREA */
+.item-header {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.item-header::before {
+    content: "";
+    position: absolute;
+    top: -48px;
+    left: -40px;
+    right: -40px;
+    height: 400px;
+    background: radial-gradient(ellipse at top, rgba(79, 125, 245, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.item-poster {
+    width: 300px;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.item-poster:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7),
+                0 0 0 1px rgba(79, 125, 245, 0.3);
+}
+
+.item-info {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.item-info h1 {
+    margin-bottom: 12px;
+    font-size: 42px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff 0%, #d0d5dd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.item-year {
+    color: #9ca3af;
+    font-size: 18px;
+    margin-bottom: 24px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+.item-desc {
+    margin-bottom: 28px;
+    line-height: 1.7;
+    color: #d1d5db;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+}
+
+/* RATING SUMMARY INFO */
+.rating-box {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.8) 100%);
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.rate-section {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.rate-section input {
+    width: 80px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.rate-section input:focus {
+    outline: none;
+    border-color: rgba(79, 125, 245, 0.5);
+    box-shadow: 0 0 0 3px rgba(79, 125, 245, 0.1);
+}
+
+.star {
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 28px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.star:hover {
+    transform: scale(1.15);
+}
+
+.star.filled {
+    color: #fbbf24;
+    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.5));
+}
+
+.rate-section button {
+    background: linear-gradient(135deg, #4f7df5 0%, #6b9eff 100%);
+    padding: 10px 24px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(79, 125, 245, 0.3);
+}
+
+.rate-section button:hover {
+    background: linear-gradient(135deg, #3d69d1 0%, #5a8cef 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 125, 245, 0.4);
+}
+
+.rate-section button:active {
+    transform: translateY(0);
+}
+/* === Review Card === */
+.review-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  transition: 0.25s ease;
+}
+
+.review-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* === Üst Bilgi === */
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-username {
+  font-size: 17px;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.review-date {
+  color: #9ca3af;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+/* === YORUM METNİ === */
+.review-text {
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+
+/* === DÜZENLE / SİL BUTONLARI === */
+.review-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.review-btn {
+  background: transparent;
+  border: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+  color: #d1d5db;
+}
+
+.review-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.review-btn.edit {
+  color: #38bdf8;
+}
+
+.review-btn.delete {
+  color: #f87171;
+}
+
+.review-btn.edit:hover {
+  background: rgba(56, 189, 248, 0.15);
+}
+
+.review-btn.delete:hover {
+  background: rgba(248, 113, 113, 0.15);
+}
+
+/* ADD REVIEW */
+.add-review {
+    margin-top: 40px;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.4) 100%);
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.add-review h3 {
+    margin-bottom: 16px;
+    color: #f3f4f6;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.add-review textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 160px;
+    padding: 16px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.4) !important;
+    color: #f3f4f6 !important;
+    border: 1px solid rgba(79, 125, 245, 0.3);
+    font-size: 15px;
+    font-family: inherit;
+    resize: vertical;
+    transition: all 0.3s ease;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+}
+
+.add-review textarea:focus {
+    outline: none;
+    border-color: rgba(79, 125, 245, 0.6);
+    box-shadow: 0 0 0 3px rgba(79, 125, 245, 0.1);
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.add-review textarea::placeholder {
+    color: #6b7280;
+}
+
+.add-review button {
+    margin-top: 16px;
+    background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+    padding: 12px 28px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.add-review button:hover {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.add-review button:active {
+    transform: translateY(0);
+}
+
+/* ADD TO LIST BUTTON */
+.add-list-btn {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-list-btn:hover {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.add-list-btn:active {
+    transform: translateY(0);
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.close-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .item-page {
+        padding: 32px 20px;
+    }
+
+    .item-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 28px;
+    }
+
+    .item-header::before {
+        left: -20px;
+        right: -20px;
+    }
+
+    .item-poster {
+        width: 70%;
+        max-width: 280px;
+    }
+
+    .item-info h1 {
+        font-size: 32px;
+    }
+
+    .rate-section {
+        justify-content: center;
+    }
+
+    .popup {
+        width: calc(100% - 40px);
+        max-width: 360px;
+    }
+
+    .add-review {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .item-info h1 {
+        font-size: 26px;
+    }
+
+    .item-year {
+        font-size: 16px;
+    }
+
+    .item-desc {
+        font-size: 15px;
+    }
+}
+/* === MODAL ARKA PLAN === */
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+
+/* === POPUP KUTUSU === */
+.modal {
+  width: 400px;
+  background: #111927;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.4);
+  position: relative;
+  animation: popup 0.25s ease;
+}
+
+@keyframes popup {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+/* === BAŞLIK === */
+.modal h2 {
+  color: white;
+  margin-bottom: 18px;
+}
+
+/* === X (KAPATMA) BUTONU === */
+.modal-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* === YENİ LİSTE OLUŞTUR BUTONU === */
+.modal-create-btn {
+  width: 100%;
+  background: #00c78b;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+/* === DEFAULT 4 LİSTE BUTONU === */
+.default-list-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.default-list-btn {
+  background: #0ea5e9;
+  padding: 12px;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.default-list-btn:hover {
+  background: #0284c7;
+}
+
+/* === INPUT === */
+.modal input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #10141c;
+  color: white;
+  margin-bottom: 16px;
+}
+
+/* === BUTON GRUP === */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* OLUŞTUR BUTONU */
+.btn-create {
+  background: #00c78b;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+/* İPTAL BUTONU */
+.btn-cancel {
+  background: #374151;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+/* === YORUM DÜZENLEME MODALI === */
+.edit-modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.edit-modal {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 14px;
+  width: 480px;
+  max-width: 90%;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  box-sizing: border-box;
+}
+
+.edit-modal textarea {
+  width: 100%;
+  height: 140px;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 12px !important;
+  box-sizing: border-box;
+}
+
+.edit-modal textarea:focus {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(79,125,245,0.5);
+  box-shadow: 0 0 0 3px rgba(79,125,245,0.25);
+  outline: none;
+}
+/* === BUTONLAR KISMI === */
+.edit-modal-buttons {
+  display: flex;
+  flex-direction: row;      
+  justify-content: center;  
+  align-items: center;      
+  gap: 14px;                
+  margin-top: 10px;         
+  width: 100%;
+}
+
+/* Ortak buton özellikleri */
+.edit-modal-buttons button {
+  flex: 1;                            /* 🔥 EŞİT GENİŞLİK */
+  height: 52px;                       /* 🔥 EŞİT YÜKSEKLİK */
+  padding: 0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.22s ease;         /* 🔥 YUMUŞAK ANİMASYON */
+}
+
+/* Kaydet (Primary Button – Apple Blue) */
+.save-btn {
+  background: linear-gradient(135deg, #4f7df5, #6b9eff);
+  border: none;
+  color: white;
+  box-shadow: 0 4px 12px rgba(79, 125, 245, 0.35);
+  margin-bottom: 37px; ;
+}
+
+.save-btn:hover {
+  background: linear-gradient(135deg, #436ff0, #5f8dff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(79, 125, 245, 0.45);
+}
+
+/* İptal (Soft Glass Button – Apple Grey) */
+.cancel-btn {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  margin-bottom: 10px; ;
+}
+
+.cancel-btn:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-2px);
+}

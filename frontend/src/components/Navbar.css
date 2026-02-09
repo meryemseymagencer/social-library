@@ -1,0 +1,193 @@
+/* === PREMIUM NEON NAVBAR === */
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(10, 13, 18, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(76, 201, 255, 0.15);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+}
+
+/* CONTAINER */
+.navbar-container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO — Neon Shimmer */
+.navbar-logo {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  background: linear-gradient(
+    120deg,
+    #4cc9ff 0%,
+    #3ca7f8 25%,
+    #1e90ff 50%,
+    #3ca7f8 75%,
+    #ffffff 100%
+  );
+  background-size: 250% 250%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(255, 255, 255, 0.85);
+
+  animation: shimmerMove 4s ease-in-out infinite;
+
+  text-shadow:
+    0 0 12px rgba(76, 201, 255, 0.45),
+    0 0 20px rgba(76, 201, 255, 0.35);
+
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.navbar-logo:hover {
+  transform: translateY(-2px);
+  text-shadow:
+    0 0 18px rgba(76, 201, 255, 0.9),
+    0 0 30px rgba(76, 201, 255, 0.7);
+}
+
+@keyframes shimmerMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* MENU LINKS */
+.navbar-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-link {
+  color: #d8d8d8;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #4cc9ff;
+  text-shadow: 0 0 8px rgba(76, 201, 255, 0.55);
+  transform: translateY(-1px);
+}
+
+/* RIGHT SIDE BUTTONS */
+.navbar-actions {
+  display: flex;
+  gap: 20px;
+}
+
+/* Normal text buttons (Giriş / Kayıt Ol yazısı) */
+.nav-auth {
+  color: #d8d8d8;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.nav-auth:hover {
+  color: #4cc9ff;
+  text-shadow: 0 0 8px rgba(76, 201, 255, 0.55);
+}
+
+/* REGISTER (solid) */
+.nav-register {
+  padding: 6px 14px;
+  background: #202830;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.nav-register:hover {
+  background: #273038;
+  color: #4cc9ff;
+  text-shadow: 0 0 10px rgba(76, 201, 255, 0.65);
+}
+
+/* PROFILE BUTTON */
+.profile-btn {
+  padding: 7px 16px;
+  background: #202830;
+  border-radius: 8px;
+  color: #f4f1ea;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.profile-btn:hover {
+  background: #273038;
+  color: #4cc9ff;
+  text-shadow: 0 0 10px rgba(76, 201, 255, 0.65);
+  transform: translateY(-2px);
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  background: #2a323c;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #eee;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #4cc9ff;
+  color: #000;
+  box-shadow: 0 0 14px rgba(76, 201, 255, 0.75);
+}
+
+/* LOGIN outline button */
+.login-btn {
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  border-color: #4cc9ff;
+  color: #4cc9ff;
+  text-shadow: 0 0 10px rgba(76, 201, 255, 0.65);
+}
+
+/* REGISTER (solid, main) */
+.register-btn {
+  background: #1F2730;
+  padding: 8px 18px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.register-btn:hover {
+  background: #27323D;
+  color: #4cc9ff;
+  text-shadow: 0 0 10px rgba(76, 201, 255, 0.65);
+}
+
+/* HEADINGS (login/register sayfası) */
+h2 {
+  margin-bottom: 28px;
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #b8e9ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 12px;
+}

@@ -1,0 +1,75 @@
+.home-wrapper {
+  padding: 40px;
+  color: #fff;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ————— HORIZONTAL SCROLL ————— */
+.scroll-row {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-behavior: smooth;
+}
+
+.scroll-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scroll-row::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
+
+/* ————— Apple Tarzı Kart ————— */
+.media-card {
+  min-width: 180px;
+  max-width: 180px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: 0.3s ease;
+}
+
+.media-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* POSTER */
+.media-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Card text */
+.media-info {
+  padding: 10px 14px;
+}
+
+.media-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  height: 40px;
+  overflow: hidden;
+}
+
+.media-info span {
+  font-size: 14px;
+  opacity: 0.6;
+}

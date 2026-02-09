@@ -1,0 +1,76 @@
+.unauth-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.unauth-modal {
+  background: #161a1f;
+  padding: 28px;
+  width: 360px;
+  border-radius: 16px;
+  text-align: center;
+
+  border: 1px solid rgba(255,255,255,0.07);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.55);
+
+  animation: modalPop 0.25s ease;
+}
+
+@keyframes modalPop {
+  from { transform: scale(.87); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+.unauth-modal h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.unauth-modal p {
+  color: #bbb;
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.unauth-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-btn,
+.login-btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cancel-btn {
+  background: #2a323c;
+  color: #ddd;
+}
+
+/* LOGIN BUTTON — Neon Blue */
+.login-btn {
+  background: #1b2a38;
+  color: #4cc9ff;
+  font-weight: 600;
+  border: 1px solid rgba(76,201,255,0.4);
+  transition: 0.25s ease;
+}
+
+.login-btn:hover {
+  background: #223443;
+  color: #4cc9ff;
+  box-shadow: 0 0 10px rgba(76,201,255,0.55);
+/*  border-color: #4cc9ff;*/
+}

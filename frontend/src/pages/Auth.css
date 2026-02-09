@@ -1,0 +1,88 @@
+/* === CONTAINER === */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0e0e0e;
+  padding: 20px;
+}
+
+/* === BOX === */
+.auth-box {
+  width: 360px;
+  background: #1a1f24;
+  padding: 32px;
+  border-radius: 14px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.auth-box h2 {
+  font-size: 26px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+/* === INPUT === */
+.auth-box input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #2a2f35;
+  background: #1b1f24;
+  color: #f1f1f1;
+  font-size: 16px;
+  outline: none;
+  transition: 0.25s ease;
+}
+
+.auth-box input::placeholder {
+  color: #7d8895;
+}
+
+.auth-box input:focus {
+  background: #22272e;
+  border-color: #40BCF4;
+  box-shadow: 0 0 0 3px rgba(64, 188, 244, 0.25);
+}
+
+/* === BUTTON === */
+.auth-box button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #00d084;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.auth-box button:hover {
+  background: #00b873;
+  transform: translateY(-2px);
+}
+
+/* === ALT LINK === */
+.auth-link {
+  margin-top: 15px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.auth-link a {
+  color: #40BCF4;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
